@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Pages/Principal.dart';
+import 'Pages/Secundaria.dart';
 
-void main() =>  runApp(MyApp());
-
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -14,15 +14,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      
       routes: {
-        '/' : (context) => Principal(),
+        '/': (context) => Secundaria(),
       },
-
       initialRoute: '/',
-
     );
   }
 }
-
-
