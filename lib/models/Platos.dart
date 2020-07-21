@@ -1,7 +1,6 @@
 import 'comida.dart';
 
 class Platos {
-
   List<Comida> _comidas;
 
   Platos() {
@@ -16,6 +15,8 @@ class Platos {
 
   int size() => _comidas.length;
 
+  Comida obtener(int i) => _comidas[i];
+
   void aniadirComida(Comida c) {
     _comidas.add(c);
   }
@@ -23,5 +24,4 @@ class Platos {
   void getRandomComida(Comida c) {
     _comidas.add(c);
   }
-
 }

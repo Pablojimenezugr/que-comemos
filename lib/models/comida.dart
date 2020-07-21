@@ -1,5 +1,3 @@
-
-
 class Comida {
   String _nombre; // hace de id
   String _descripcion;
@@ -12,6 +10,4 @@ class Comida {
   String get descripcion => _descripcion;
 
   bool get especial => _especial;
-
 }
-

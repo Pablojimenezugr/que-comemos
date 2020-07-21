@@ -10,9 +10,8 @@ class BarraNavegacion extends StatefulWidget {
 }
 
 class _BarraNavegacionState extends State<BarraNavegacion> {
-
   int _indiceSeleccionado;
-  TextStyle tipoEstilo;      
+  TextStyle tipoEstilo;
 
   @override
   void initState() {
@@ -21,7 +20,11 @@ class _BarraNavegacionState extends State<BarraNavegacion> {
     super.initState();
   }
 
-  void _cambiarIndice(int i) => setState(() => _indiceSeleccionado = i);
+  void _cambiarIndice(int i) {
+    var rutas = ['/', '/list'];
+    setState(() => _indiceSeleccionado = i);
+    //Navigator.put
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +39,8 @@ class _BarraNavegacionState extends State<BarraNavegacion> {
           title: Text('Lista de comidas'),
         ),
       ],
-      
       currentIndex: _indiceSeleccionado,
-
       selectedItemColor: Colors.amber[800],
-
       onTap: _cambiarIndice,
     );
   }
