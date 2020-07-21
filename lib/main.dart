@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:que_comemos/pruebas.dart';
 import 'Pages/Principal.dart';
-import 'Pages/Secundaria.dart';
 
-import 'pruebas.dart';
-
-void main() => runApp(Pruebas());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -19,7 +15,6 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => Principal(),
-        '/list': (context) => Secundaria(),
       },
       initialRoute: '/',
     );
