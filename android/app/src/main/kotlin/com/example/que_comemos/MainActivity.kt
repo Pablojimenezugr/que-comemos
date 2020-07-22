@@ -1,4 +1,4 @@
-package com.example.que_comemos
+package es.jj.que_comemos
 
 import io.flutter.embedding.android.FlutterActivity
 
