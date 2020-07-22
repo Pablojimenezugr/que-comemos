@@ -69,10 +69,15 @@ class Primer extends StatefulWidget {
 
 class _PrimerState extends State<Primer> {
   String sms;
+  Text txt_rdn;
+  TextStyle estiloSeleccionado;
 
   @override
   void initState() {
     sms = "pulsa para obtener un plato aleatorio";
+    txt_rdn = Text(this.sms, textAlign: TextAlign.center);
+    estiloSeleccionado = TextStyle(
+        fontSize: 40, color: Colors.teal, fontWeight: FontWeight.bold);
     super.initState();
   }
 
@@ -82,16 +87,21 @@ class _PrimerState extends State<Primer> {
       child: InkWell(
         splashColor: Colors.blue,
         onTap: () {
-          sms = Platos().getRandomComida().nombre;
+          setState(() {
+            sms = Platos().getRandomComida().nombre;
+            txt_rdn = Text(
+              this.sms,
+              textAlign: TextAlign.center,
+              style: this.estiloSeleccionado,
+            );
+          });
         },
         child: Container(
           width: 300,
           height: 100,
           child: Center(
-              child: Text(
-            sms,
-            textAlign: TextAlign.center,
-          )),
+            child: txt_rdn,
+          ),
         ),
       ),
     );
